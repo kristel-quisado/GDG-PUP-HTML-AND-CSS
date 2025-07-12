@@ -1,24 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
+/* Body and Headings */
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
-/* h1 */
+h1 {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #f1f1f1;
+  font-size: 48px;
+  margin-top: 40px;
+}
 
-/* #subtitle */
+#subtitle {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #cccccc;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
 
-/* .flexboxContainer */
+/* Flexbox Container */
+.flexboxContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding: 0 5%;
+  flex-wrap: wrap;
+}
 
-/*.flexboxContainer > div */
+/* Individual Boxes */
+.flexboxContainer > div {
+  width: 20%;
+  height: 50%;
+  background-image: linear-gradient(to right, rgba(12, 62, 224, 0), rgb(150, 105, 47));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding: 3%;
+  transition: 0.4s ease;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+}
 
-/* a */
+/* Hover Effect */
+.flexboxContainer > div:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 20px 6px rgba(0, 255, 100, 0.6); /* Green glow */
+  transform: translateY(-5px);
+}
 
-/* img */
+/* Link Style */
+.flexboxContainer a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* .flexboxContainer > div:hover */
+/* Extra-Rounded Logos (Circular Container Effect) */
+.flexboxContainer img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 15px;
+  border: 3px solid #00ff99;
+  box-shadow: 0 0 12px rgba(0, 255, 100, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Optional: Slight Scale on Hover */
+.flexboxContainer a:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+}
